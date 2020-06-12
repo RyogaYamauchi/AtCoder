@@ -10,6 +10,11 @@ namespace AtCoder.XXX.A
     {
         public static void Main(string[] args)
         {
+            var datas = Ecr();
+            var a = datas[0];
+            var b = datas[1];
+            var r = a * b;
+            P(r % 2 == 0 ? "Even" : "Odd");
         }
 
         private static StreamReader sr;

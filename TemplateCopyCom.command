@@ -1,4 +1,4 @@
-cd ~/projects/practice/AtCoder/AtCoder
+cd ~/home/AtCoder
 echo "ファイル名を入力してください"
 read str
 echo "$str"
