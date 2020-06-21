@@ -21,6 +21,18 @@ namespace AtCoder.XXX.A
             }
             return sr.ReadLine().Split().Select(int.Parse).ToArray();
         }
+        public static string Er()
+        {
+            if (sr == null)
+            {
+                sr = new StreamReader("input.txt", Encoding.GetEncoding("UTF-8"));
+            }
+            return sr.ReadLine();
+        }
+        public static string r()
+        {
+            return Console.ReadLine();
+        }
         public static  int[] cr()
         {
             return Console.ReadLine().Split().Select(int.Parse).ToArray();

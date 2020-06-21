@@ -10,6 +10,26 @@ namespace AtCoder.XXX.B
     {
         public static void Main(string[] args)
         {
+            var datas = Ecr();
+            var n = datas[0];
+            var a = datas[1];
+            var b = datas[2];
+            var result = 0;
+            for(var i = 0;i< n+1;i++)
+			{
+                var sum = 0;
+                foreach(var s in i.ToString())
+				{
+                    sum += int.Parse(s.ToString());
+
+                }
+
+                if (sum >= a && sum <= b)
+				{
+                    result += i;
+				}
+			}
+            P(result);
         }
 
         private static StreamReader sr;

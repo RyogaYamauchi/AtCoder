@@ -10,6 +10,25 @@ namespace AtCoder.XXX.B
     {
         public static void Main(string[] args)
         {
+            var datas = new List<int>();
+            var n = int.Parse(Er());
+            var cnt = 0;
+            for(var i = 0; i < n;i++)
+			{
+                var a = int.Parse(Er());
+                datas.Add(a);
+			}
+            while(true)
+			{
+                if(datas.Count == 0)
+				{
+                    break;
+				}
+                var min = datas.Min();
+                datas.RemoveAll(x => x==min);
+                cnt++;
+			}
+            P(cnt);
         }
 
         private static StreamReader sr;
@@ -20,6 +39,10 @@ namespace AtCoder.XXX.B
                 sr = new StreamReader("input.txt", Encoding.GetEncoding("UTF-8"));
             }
             return sr.ReadLine().Split().Select(int.Parse).ToArray();
+        }
+        public static  int[] cr()
+        {
+            return Console.ReadLine().Split().Select(int.Parse).ToArray();
         }
         public static string Er()
         {
@@ -32,10 +55,6 @@ namespace AtCoder.XXX.B
         public static string r()
         {
             return Console.ReadLine();
-        }
-        public static  int[] cr()
-        {
-            return Console.ReadLine().Split().Select(int.Parse).ToArray();
         }
         public static int cri()
         {

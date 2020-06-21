@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace AtCoder.XXX.B
+namespace AtCoder.XXX.A
 { 
     public class Program
     {
         public static void Main(string[] args)
         {
+            var name =Er();
+            P(name[0] + name[1] + name[2]);
         }
+
 
         private static StreamReader sr;
         public static int[] Ecr()

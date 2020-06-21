@@ -4,12 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace AtCoder.XXX.C
+namespace AtCoder.A
 { 
     public class Program
     {
         public static void Main(string[] args)
         {
+            var s = Er();
+			if (Char.IsUpper(s[0]))
+			{
+                P("A");
+                return;
+			}
+            P("a");
         }
 
         private static StreamReader sr;
@@ -20,6 +27,18 @@ namespace AtCoder.XXX.C
                 sr = new StreamReader("input.txt", Encoding.GetEncoding("UTF-8"));
             }
             return sr.ReadLine().Split().Select(int.Parse).ToArray();
+        }
+        public static string Er()
+        {
+            if (sr == null)
+            {
+                sr = new StreamReader("input.txt", Encoding.GetEncoding("UTF-8"));
+            }
+            return sr.ReadLine();
+        }
+        public static string r()
+        {
+            return Console.ReadLine();
         }
         public static  int[] cr()
         {

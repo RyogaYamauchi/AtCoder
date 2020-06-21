@@ -4,12 +4,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace AtCoder.XXX.B
+namespace AtCoder.XXX.C
 { 
     public class Program
     {
         public static void Main(string[] args)
         {
+            var datas = Ecr();
+            var x = datas[0];
+            var n = datas[1];
+            if(n == 0)
+			{
+                P(x);
+                return;
+			}
+            var a = Ecr().ToList();
+            var min = x;
+            var max = x;
+            while(true)
+			{
+                if(a.Contains(min))
+				{
+                    min--;
+				}
+				else
+				{
+                    //if(min >= 1)
+					{
+                        P(min);
+                        return;
+                    }   
+				}
+                if(a.Contains(max))
+				{
+                    max++;
+				}
+				else
+				{
+                    //if(max <= 100)
+					{
+                        P(max);
+                        return;
+                    }
+				}
+			}
+
         }
 
         private static StreamReader sr;
@@ -20,6 +59,10 @@ namespace AtCoder.XXX.B
                 sr = new StreamReader("input.txt", Encoding.GetEncoding("UTF-8"));
             }
             return sr.ReadLine().Split().Select(int.Parse).ToArray();
+        }
+        public static  int[] cr()
+        {
+            return Console.ReadLine().Split().Select(int.Parse).ToArray();
         }
         public static string Er()
         {
@@ -32,10 +75,6 @@ namespace AtCoder.XXX.B
         public static string r()
         {
             return Console.ReadLine();
-        }
-        public static  int[] cr()
-        {
-            return Console.ReadLine().Split().Select(int.Parse).ToArray();
         }
         public static int cri()
         {

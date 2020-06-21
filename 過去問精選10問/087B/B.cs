@@ -10,6 +10,27 @@ namespace AtCoder.XXX.B
     {
         public static void Main(string[] args)
         {
+
+            var a = int.Parse(Er());
+            var b = int.Parse(Er());
+            var c = int.Parse(Er());
+            var x = int.Parse(Er());
+            var cnt = 0;
+            for(var i = 0; i < a+1;i++)
+			{
+                for(var j = 0; j < b+1;j++)
+				{
+                    for( var k = 0; k < c+1;k++)
+					{
+                        if (i * 500 + j * 100 + k * 50 == x)
+                        {
+                            cnt++;
+			            }
+					}
+				}
+			}
+            P(cnt);
+
         }
 
         private static StreamReader sr;

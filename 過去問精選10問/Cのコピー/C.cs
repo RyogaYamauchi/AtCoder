@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace AtCoder.XXX.B
+namespace AtCoder.XXX.C
 { 
     public class Program
     {

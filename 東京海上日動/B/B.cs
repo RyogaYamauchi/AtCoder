@@ -10,6 +10,19 @@ namespace AtCoder.XXX.B
     {
         public static void Main(string[] args)
         {
+            var F = Ecr();
+            long a = F[0];
+            var aw = F[1];
+            var S = Ecr();
+            var b = S[0];
+            var bw = S[1];
+            var t = int.Parse(Er());
+            if(a + (aw * t) >= b + (bw * t))
+			{
+                P("Yes");
+                return;
+			}
+            P("No");
         }
 
         private static StreamReader sr;

@@ -4,12 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace AtCoder.XXX.B
+namespace AtCoder.B
 { 
     public class Program
     {
         public static void Main(string[] args)
         {
+            var a = Ecr();
+            var n = a[0];
+            var k = a[1];
+            var datas = Ecr();
+            datas = datas.OrderBy(x => x).ToArray();
+            var sum = 0;
+            for(var i = 0; i < k;i++)
+			{
+                sum += datas[i];
+			}
+            P(sum);
         }
 
         private static StreamReader sr;

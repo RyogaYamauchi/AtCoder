@@ -4,12 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace AtCoder.XXX.B
+namespace AtCoder.XXX.A
 { 
     public class Program
     {
         public static void Main(string[] args)
         {
+            var datas = Ecr();
+            var cnt = 0;
+            foreach(var data in datas)
+			{
+                if(data == 0)
+				{
+                    P(cnt);
+                    return;
+				}
+                cnt++;
+			}
         }
 
         private static StreamReader sr;
