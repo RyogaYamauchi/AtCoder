@@ -10,6 +10,9 @@ namespace AtCoder.XXX.A
     {
         public static void Main(string[] args)
         {
+            var a = long.Parse(Er());
+            var r = a + (a * a) + (a * a * a);
+            P(r.ToString());
         }
 
         private static StreamReader sr;

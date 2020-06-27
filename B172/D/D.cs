@@ -10,6 +10,48 @@ namespace AtCoder.XXX.D
     {
         public static void Main(string[] args)
         {
+            var n = int.Parse(Er());
+            long result = 0;
+            var cnt = 0;
+            for(var i  =1;i < n+1;i++)
+			{
+                var a = PrimeFactors(i);
+                foreach(var b in a)
+				{
+                    P(b);
+				}
+                for(var j = 0;j < a.Count(); j++)
+				{
+                    for(var k = 0; k < a.Count();k++)
+					{
+                        cnt++;
+					}
+				}
+                result += i * cnt;
+
+            }
+            P(result.ToString());
+		}
+
+        public static IEnumerable<int> PrimeFactors(int n)
+        {
+            int i = 2;
+            int tmp = n;
+
+            while (i * i <= n) //※1
+            {
+                if (tmp % i == 0)
+                {
+                    tmp /= i;
+                    yield return i;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            if (tmp != 1) yield return tmp;//最後の素数も返す
+            if (tmp == 1) yield return tmp;
         }
 
         private static StreamReader sr;

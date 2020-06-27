@@ -10,6 +10,18 @@ namespace AtCoder.XXX.B
     {
         public static void Main(string[] args)
         {
+            var s = Er();
+            var t = Er();
+            var cnt = 0;
+
+            for(var i = 0;i< s.Length;i++)
+			{
+                if(s[i] != t[i])
+				{
+                    cnt++;
+				}
+			}
+            P(cnt);
         }
 
         private static StreamReader sr;
